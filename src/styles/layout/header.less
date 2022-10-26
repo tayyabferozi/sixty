@@ -1,0 +1,38 @@
+/* Header Style */
+.ant-layout-header {
+  .box-shadow(@gx-card-shadow-lg);
+  .flex-display(flex, row, wrap);
+  .align-items(center);
+  .justify-content(space-between);
+  line-height: 1;
+  padding: @layout-header-padding;
+  height: @layout-header-height;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+  color: @header-text-color;
+
+  @media screen and (max-width: @screen-md-max) {
+    padding: @layout-header-padding-res;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    height: @layout-header-height-res;
+  }
+
+  & .username {
+    color: #535353;
+    font-weight: 600;
+  }
+}
+
+& .nav-menu {
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 400;
+  line-height: 21px;
+
+  & a {
+    padding: 8px 30px 8px 12px;
+  }
+}

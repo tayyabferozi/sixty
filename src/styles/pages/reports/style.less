@@ -1,0 +1,88 @@
+.content-form__form {
+    & .ant-table-wrapper{
+        overflow: auto;
+        & .ant-table{
+            & .ant-table-row{
+                cursor: pointer;
+            }
+            & .ant-table-row:hover{
+                & .ant-table-cell{
+                    background-color: #b5b5b54a;
+                }
+            }
+        }
+        & .ant-table-cell{
+            text-align: center;
+        }
+        & .ant-table-title {
+            & .ant-select {
+                min-width: 130px;
+                & .ant-select-selector{
+                    height: 45px;
+                    display: flex;
+                    align-items: center
+                }
+            }
+            & .content-form__button{
+                height: 45px !important;
+            }
+        } 
+    }
+}
+.report_content__header{
+    height: auto !important;
+    align-items: flex-end !important;
+    & .ant-row{
+        margin: 0 !important;
+        & .filter_field__group{
+            background: #e2e2e2a1;
+            padding: 24px;
+            border-radius: 7px;
+            margin-bottom: 30px !important;
+        }
+        & .ant-col{
+            & .ht-45{
+                height: 45px;
+                display: flex;
+                align-items: center;
+                
+            }
+            & .add_filter_field{
+                width: 90% !important;
+                height: 36px !important;
+                max-height: 36px !important;
+            }
+            & .filter_field{
+                width: 90% !important;
+                height: 36px !important;
+                max-height: 36px !important;
+            }
+            & .ant-select{
+                width: 90%;
+            }
+            & .checkbox{
+                display: flex;
+                align-items: center;
+            }
+            & .no-bg-input:focus{
+                border: 0px !important;
+            }
+            & .no-bg-select{
+                & .ant-select-selector{
+                    height: 45px;
+                    & .ant-select-selection-item{
+                        align-items: center;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    & .form_btn_group{
+        & .ant-btn{
+            margin-top: 18px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+}

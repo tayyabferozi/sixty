@@ -1,0 +1,128 @@
+/*Login Styles*/
+
+.@{class-prefix}-login-wrapper {
+  display: block;
+  border-radius: 5px;
+  background: hsla(0, 0%, 100%, 0.25) !important;
+  padding: 50px 60px;
+
+  .@{class-prefix}-login-header-wrapper {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 40px;
+  }
+
+  .@{class-prefix}-login-footer-wrapper {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Poppins";
+    text-align: center;
+    line-height: 40px;
+
+    a {
+      color: #08f;
+      font-family: "Poppins";
+      font-weight: 600;
+    }
+  }
+
+  & .@{class-prefix}-login-input-wrapper {
+    display: block;
+    margin: 10px 0;
+
+    & .@{class-prefix}-login-input {
+      height: 54px;
+      width: 360px;
+      color: #ffffff;
+      font-size: 18px;
+      font-family: "Poppins";
+      background: rgba(0, 0, 0, 0.3);
+      border-color: transparent;
+    }
+
+    & .@{class-prefix}-login-input-err {
+      border-color: #f5222d;
+    }
+
+    & .@{class-prefix}-login-input-err-messgae {
+      display: block;
+      color: #f5222d;
+      font-size: 12px;
+      font-family: "Poppins";
+    }
+  }
+
+  .@{class-prefix}-login-checkbox-wrapper {
+    display: flex;
+
+    .ant-checkbox-inner {
+      border: 0;
+      border-radius: 3px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .remember {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .forgot {
+      color: #ffffff;
+      font-weight: 500;
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background: #08f;
+    }
+
+    .ant-checkbox-checked::after {
+      border-radius: 3px;
+    }
+  }
+
+  .@{class-prefix}-login-btn {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .google {
+    background: #dd4b39;
+  }
+
+  .facebook {
+    background: #3b5998;
+    margin-top: 10px;
+  }
+
+  .submit {
+    background: #08f;
+  }
+
+  .ant-btn {
+    display: flex;
+    width: 360px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    border: 0;
+    margin: 10px 0;
+  }
+
+  .anticon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+}

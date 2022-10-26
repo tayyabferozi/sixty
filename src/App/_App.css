@@ -1,0 +1,514 @@
+/* .App {
+    text-align: center;
+  } */
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  #lnb {
+    /* position: absolute; */
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #d5d5d5;
+    padding: 12px 10px;
+    background: #fafafa;
+    /* height: 429px; */
+}
+
+#right {
+  /* position: absolute; */
+  left: 265px;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+}
+
+#lnb label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/*
+
+Bouton to add a Calendar
+
+*/
+
+.lnb-new-calendar {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.lnb-new-calendar-btn {
+  height: 100%;
+  font-size: 14px;
+  background-color: #ff6618;
+  color: #ffffff;
+  border: 0;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.lnb-new-calendar-btn:hover {
+  height: 100%;
+  font-size: 14px;
+  background-color: #e55b15;
+  color: #ffffff;
+  border: 0;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.lnb-new-calendar-btn:active {
+  height: 100%;
+  font-size: 14px;
+  background-color: #d95614;
+  color: #ffffff;
+  border: 0;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+
+End Bouton to add a Calendar
+
+*/
+
+.lnb-calendars > div {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: normal;
+}
+
+.lnb-calendars-d1 {
+  padding-left: 8px;
+}
+
+.lnb-calendars-d1 label {
+  font-weight: normal;
+}
+
+.lnb-calendars-item {
+  min-height: 14px;
+  line-height: 14px;
+  padding: 8px 0;
+}
+
+.lnb-footer {
+  color: #999;
+  font-size: 11px;
+  position: absolute;
+  bottom: 12px;
+  padding-left: 16px;
+}
+
+/* .calendar-filter {
+  padding-top: 16px;
+  padding-bottom: 16px;
+} */
+
+#dropdownMenu-calendarType {
+  padding: 0 8px 0 11px;
+}
+
+#calendarTypeName {
+  min-width: 62px;
+  display: inline-block;
+  text-align: left;
+  line-height: 30px;
+}
+
+.move-today {
+  padding: 0 16px;
+  line-height: 30px;
+}
+
+.move-day {
+  padding: 8px;
+  font-size: 0;
+}
+
+#renderRange {
+  padding-left: 12px;
+  font-size: 19px;
+  vertical-align: middle;
+}
+
+.dropdown-menu-title .calendar-icon {
+  margin-right: 8px;
+}
+
+.calendar-bar {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.calendar-name {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.schedule-time {
+    color: #005aff;
+}
+
+#calendar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    top: 64px;
+}
+
+/** custom fontawesome */
+.fa {
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.weekday-grid-more-schedules {
+  float: right;
+  margin-top: 4px;
+  margin-right: 6px;
+  height: 18px;
+  line-height: 17px;
+  padding: 0 5px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top:45px;
+  right:0px;
+  width: 200px;
+  background-color: white;
+  font-weight:bold;
+  position: absolute;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+li a {
+  color: #000;
+  text-decoration: none;
+}
+li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+li:last-child {
+  border-bottom: none;
+}
+li:hover {
+  background-color: #e5e5e5;
+  color: white;
+}
+.button{
+  width:178px;
+  height:18px;
+  background-color:#ff3232 ;
+  padding:12px;
+  border-radius:5px;
+  font-weight:bold;
+  color:white;
+}
+.button:before{
+  content:"";
+  position:absolute;
+  width:0px;
+  height:0px;
+  border: 10px solid;
+  border-color: white transparent transparent transparent;
+  right:6px;
+  top:18px;
+}
+
+/*  
+
+Style of the left side of the calendar
+
+*/
+
+/* .lnb-calendars-d1 {
+  padding-left: 8px;
+}
+
+.lnb-calendars-d1 label {
+  font-weight: normal;
+}
+
+.lnb-calendars-item {
+  min-height: 14px;
+  line-height: 14px;
+  padding: 8px 0;
+} */
+
+input[type='checkbox'].psync-full-calendar-checkbox-square {
+  display: none;
+}
+input[type='checkbox'].psync-full-calendar-checkbox-square + span {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 14px;
+  margin-right: 8px;
+  width: 14px;
+  height: 14px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAADpJREFUKBVjPHfu3O5///65MJAAmJiY9jCcOXPmP6kApIeJBItQlI5qRAkOVM5o4KCGBwqPkcxEvhsAbzRE+Jhb9IwAAAAASUVORK5CYII=) no-repeat;
+  vertical-align: middle;
+}
+input[type='checkbox'].psync-full-calendar-checkbox-square {
+  display: none;
+}
+input[type='checkbox'].psync-full-calendar-checkbox-square + span {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 14px;
+  margin-right: 8px;
+  width: 14px;
+  height: 14px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAADpJREFUKBVjPHfu3O5///65MJAAmJiY9jCcOXPmP6kApIeJBItQlI5qRAkOVM5o4KCGBwqPkcxEvhsAbzRE+Jhb9IwAAAAASUVORK5CYII=) no-repeat;
+  vertical-align: middle;
+}
+input[type='checkbox'].psync-full-calendar-checkbox-square:checked + span {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAMBJREFUKBWVkjEOwjAMRe2WgZW7IIHEDdhghhuwcQ42rlJugAQS54Cxa5cq1QM5TUpByZfS2j9+dlJVt/tX5ZxbS4ZU9VLkQvSHKTIGRaVJYFmKrBbTCJxE2UgCdDzMZDkHrOV6b95V0US6UmgKodujEZbJg0B0ZgEModO5lrY1TMQf1TpyJGBEjD+E2NPN7ukIUDiF/BfEXgRiGEw8NgkffYGYwCi808fpn/6OvfUfsDr/Vc1IfRf8sKnFVqeiVQfDu0tf/nWH9gAAAABJRU5ErkJggg==) no-repeat;
+}
+input[type='checkbox'].psync-full-calendar-checkbox-round {
+  display: none;
+}
+input[type='checkbox'].psync-full-calendar-checkbox-round + span {
+  display: inline-block;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: middle;
+  margin-right: 8px;
+  border-radius: 8px;
+  border: solid 2px;
+  background: transparent;
+}
+
+/*  
+
+End Style of the left side of the calendar
+
+*/
+
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+  background: white;
+}
+
+
+.tui-view-13 {
+  height: unset!important;
+}
+
+
+.tui-full-calendar-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/*  Custom Dropdown list */
+
+.select-css {
+	display: block;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 700;
+	color: #444;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+.select-css::-ms-expand {
+	display: none;
+}
+.select-css:hover {
+	border-color: #888;
+}
+.select-css:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+.select-css option {
+	font-weight:normal;
+}
+
+/*  End Custom Dropdown list */
+
+
+
+/*
+
+Bouton to add a Schedule
+
+*/
+
+.lnb-new-schedule {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.lnb-new-schedule-btn {
+  height: 100%;
+  font-size: 14px;
+  background-color: #ff6618;
+  color: #ffffff;
+  border: 0;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.lnb-new-schedule-btn:hover {
+  height: 100%;
+  font-size: 14px;
+  background-color: #e55b15;
+  color: #ffffff;
+  border: 0;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.lnb-new-schedule-btn:active {
+  height: 100%;
+  font-size: 14px;
+  background-color: #d95614;
+  color: #ffffff;
+  border: 0;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+
+End Bouton to add a Schedule
+
+*/
+
+
+
+
+/*
+
+Color Picker Zone
+
+*/
+
+.color-picker-palette{
+  position: absolute;
+  z-index: 100;
+}
+
+.color-picker-cover{
+  position: fixed;
+  top:0px;
+  left:0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+
+/*
+
+End Color Picker Zone
+
+*/
+
+

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,IAAI,CAAJ,mEAAI;AACJ,IAAI,CAAJ,mDAAI;AACJ,IAAI,CAAJ,gCAAI;AACJ,IAAI,CAAJ,2BAAI;AACJ,IAAI,CAAJ,4BAAI;AACJ,IAAI,CAAJ,0BAAI;AACJ,IAAI,CAAJ,8BAAI;AACJ,IAAI,CAAJ,4BAAI;AACJ,IAAI,CAAJ,2BAAI;AACJ,IAAI,CAAJ,2BAAI;AACJ,IAAI,CAAJ,oBAAI;AACJ,IAAI,CAAJ,qBAAI",
+    "sources": [
+        "dx.material.purple.dark.scss"
+    ],
+    "names": [],
+    "file": "dx.material.purple.dark.css"
+}

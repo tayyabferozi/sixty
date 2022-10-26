@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif !important;
+}
+
+body {
+  overflow: auto;
+}
+
+.page-section {
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+
+  @media screen and (max-width: 767px) {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  @media screen and (max-width: 575px) {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+.cta-btn {
+  display: block;
+  transition: 0.4s ease;
+
+  .btn-text {
+    font-weight: 600;
+  }
+
+  &.primary {
+    width: 100%;
+    background: linear-gradient(45deg, #6b3af5, #6b39f5);
+    width: 100%;
+    border-radius: 200px;
+    padding: 1rem 0;
+
+    &:hover {
+      box-shadow: 0 4px 6px #a88afb;
+    }
+
+    .btn-text {
+      color: #fff;
+    }
+  }
+}
+
+#auth-layout {
+  background: linear-gradient(135deg, #6b3af5, #3c08c9);
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .page-section {
+    width: 100%;
+  }
+
+  .auth-card {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+
+    .left,
+    .right {
+      min-height: 470px;
+      width: 50%;
+    }
+
+    .left {
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .right {
+      padding: 2rem 4rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  #auth-layout {
+    flex-direction: column;
+  }
+}
+
+.nav-item.nav-link {
+  font-weight: 500;
+  position: relative;
+
+  transition: 0.4s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #6b39f5;
+    border-radius: 20px;
+    transition: 0.4s ease;
+  }
+
+  &.active {
+    color: #3c08c9 !important;
+
+    &::before {
+      width: 20px;
+    }
+  }
+}

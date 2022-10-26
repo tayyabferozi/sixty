@@ -1,0 +1,35 @@
+.ant-modal-body {
+  & .ava-select-selection {
+    & .ant-select-selection-search {
+      & .ant-select-selection-search-input {
+        margin-top: -8px;
+      }
+    }
+  }
+}
+.customer__content-form {
+  & .content-form__form{
+    & .customer_table{
+      // overflow: hidden;
+      & .ant-table-row{
+        cursor: pointer;
+        & .ant-space{
+          & .ant-space-item{
+            & .ava-btn-disable {
+              background-color: #80808078 !important;
+              cursor:not-allowed;
+              & .anticon{
+                color: #ffffffc7 !important;
+              }
+            }
+          }
+        }
+      }
+      & .ant-table-row:hover{
+        & .ant-table-cell{
+          background-color: #b5b5b54a;
+        }
+      }
+    }
+  }
+}
